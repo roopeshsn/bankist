@@ -33,7 +33,7 @@ body {
 
 /* GENERAL ELEMENTS */
 
-.greetings {
+#section-greetings {
   display: none;
 }
 
@@ -70,6 +70,7 @@ body {
 
 .btn {
   display: inline-block;
+  color: black;
   background-color: var(--color-primary);
   font-size: 1.6rem;
   font-family: inherit;
@@ -79,6 +80,7 @@ body {
   border-radius: 10rem;
   cursor: pointer;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 .btn--text {
