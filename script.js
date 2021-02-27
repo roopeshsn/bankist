@@ -56,10 +56,16 @@ navLinks.addEventListener('click', (e) => {
   e.preventDefault()
 
   // Matching Strategy
+  const options = {
+    behavior: 'smooth',
+  }
 
   if (e.target.classList.contains('nav__link')) {
     const id = e.target.getAttribute('href')
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+    if (id.parent.classList == 'nav__link--btn-login') {
+      location.href = 'app.html'
+    }
+    document.querySelector(id).scrollIntoView(options)
   }
 })
 

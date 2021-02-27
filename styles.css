@@ -151,7 +151,9 @@ img {
 }
 
 .nav__link:link,
-.nav__link:visited {
+.nav__link:visited,
+.nav__link--btn-login:link,
+.nav__link--btn-login:visited {
   font-size: 1.7rem;
   font-weight: 400;
   color: inherit;
