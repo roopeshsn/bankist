@@ -62,7 +62,7 @@ navLinks.addEventListener('click', (e) => {
 
   if (e.target.classList.contains('nav__link')) {
     const id = e.target.getAttribute('href')
-    if (id.parent.classList == 'nav__link--btn-login') {
+    if (!id) {
       location.href = 'app.html'
     }
     document.querySelector(id).scrollIntoView(options)
