@@ -85,6 +85,13 @@ const inputCloseUsername = document.querySelector('.form__input--user')
 const inputClosePin = document.querySelector('.form__input--pin')
 let currentAccount, timer
 
+const form = document.querySelector('.login')
+const btnLogout = document.querySelector('.btn-logout')
+const footerText = document.querySelector('.footer-text')
+
+btnLogout.classList.add('remove')
+footerText.classList.add('remove')
+
 // FAKE ALWAYS LOGGED IN (FOR DEVELOPMENT PURPOSE)
 // currentAccount = account1
 // updateUI(currentAccount)
@@ -200,6 +207,15 @@ function updateUI(account) {
   calcDisplaySummary(account)
 }
 
+// logging out user
+function logout() {
+  form.classList.remove('remove')
+  btnLogout.classList.add('remove')
+  footerText.classList.add('remove')
+  labelWelcome.textContent = 'Log in to get started'
+  containerApp.style.opacity = 0
+}
+
 // const inrToUsd = 0.014
 // const movementsUsd = account1.movements.map((mov) => inrToUsd * mov)
 
@@ -230,6 +246,9 @@ btnLogin.addEventListener('click', (e) => {
     // To clear the input fields
     inputLoginUsername.value = inputLoginPin.value = ''
     inputLoginPin.blur()
+    form.classList.add('remove')
+    btnLogout.classList.remove('remove')
+    footerText.classList.remove('remove')
     if (timer) clearInterval(timer)
     timer = startLogOutTimer()
     updateUI(currentAccount)
@@ -295,4 +314,8 @@ btnClose.addEventListener('click', (e) => {
   }
   inputCloseUsername.value = inputClosePin.value = ''
   inputLoginPin.blur()
+})
+
+btnLogout.addEventListener('click', (e) => {
+  logout()
 })

@@ -32,7 +32,32 @@ nav {
 .welcome {
   font-size: 2.25rem;
   font-weight: 500;
-  color: #5ec576;
+}
+
+.login.remove {
+  display: none;
+}
+
+.btn-logout {
+  outline: none;
+  padding: 10px;
+  border: none;
+  background: red;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.btn-logout:hover {
+  opacity: 0.7;
+}
+
+.btn-logout.remove {
+  display: none;
+}
+
+.footer-text.remove {
+  display: none;
 }
 
 .logo {
@@ -304,8 +329,7 @@ footer {
   margin: 4rem auto;
 }
 
-.left,
-.right {
+.footer-text {
   font-size: 1.25rem;
   font-weight: 500;
   color: #666;
@@ -377,8 +401,6 @@ footer {
   }
 
   .footer {
-    display: flex;
-    flex-direction: column;
     text-align: center;
   }
 }

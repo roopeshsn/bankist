@@ -1152,16 +1152,25 @@ h4 {
   }
 }
 
-@media (min-width: 860px) and (max-width: 955px) {
+@media (min-width: 860px) and (max-width: 1035px) {
   .nav__link--btn {
     border-radius: 1rem;
-    padding: 0.5rem;
+    padding: 5px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 830px) {
+  .nav {
+    width: 50%;
+    text-align: center;
   }
 }
 
 @media (min-width: 600px) and (max-width: 860px) {
   .nav__link--btn {
     border-radius: 1rem;
-    padding: 0.5rem;
+    padding: 5px;
+    font-size: 1rem;
   }
 }
