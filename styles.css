@@ -674,8 +674,9 @@ h4 {
 }
 
 .scroll-to-top-btn {
-  background-color: black;
+  background: var(--color-primary);
   border: none;
+  outline: none;
   border-radius: 50%;
   color: white;
   cursor: pointer;
