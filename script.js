@@ -24,6 +24,8 @@ const slider = document.querySelector('.slider')
 let currentSlide = 0
 const maxSlide = slides.length
 const dotContainer = document.querySelector('.dots')
+const target = document.querySelector('.footer')
+const scrollToTopBtn = document.querySelector('.scroll-to-top-btn')
 const openModal = function (e) {
   e.preventDefault()
   modal.classList.remove('hidden')
@@ -240,3 +242,31 @@ dotContainer.addEventListener('click', (e) => {
     activateDot(slide)
   }
 })
+
+// Scroll to top implementation
+
+var rootElement = document.documentElement
+
+function scrollToTopCallback(entries, observer) {
+  // The callback will return an array of entries, even if you are only observing a single item
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Show button
+      scrollToTopBtn.classList.add('show-btn')
+    } else {
+      // Hide button
+      scrollToTopBtn.classList.remove('show-btn')
+    }
+  })
+}
+
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+}
+scrollToTopBtn.addEventListener('click', scrollToTop)
+
+const observer = new IntersectionObserver(scrollToTopCallback)
+observer.observe(target)
