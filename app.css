@@ -38,24 +38,6 @@ nav {
   display: none;
 }
 
-.btn-logout {
-  outline: none;
-  padding: 10px;
-  border: none;
-  background: red;
-  color: white;
-  font-weight: 500;
-  font-size: 1.5rem;
-}
-
-.btn-logout:hover {
-  opacity: 0.7;
-}
-
-.btn-logout.remove {
-  display: none;
-}
-
 .footer-text.remove {
   display: none;
 }
@@ -322,7 +304,7 @@ h2 {
   font-weight: 600;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: space-between;
   max-width: 100rem;
@@ -333,6 +315,29 @@ footer {
   font-size: 1.25rem;
   font-weight: 500;
   color: #666;
+}
+
+.fa-sign-out-alt {
+  color: #fff;
+}
+
+.btn-logout {
+  outline: none;
+  padding: 10px;
+  border: none;
+  background: red;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn-logout:hover {
+  opacity: 0.7;
+}
+
+.btn-logout.remove {
+  display: none;
 }
 
 @media (max-width: 800px) {
@@ -353,6 +358,25 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 460px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-text {
+    order: 2;
+    margin-bottom: 1rem;
+  }
+
+  .btn-logout {
+    order: 1;
+    align-self: stretch;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -387,6 +411,23 @@ footer {
   .transaction-number {
     display: none;
   }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-text {
+    order: 2;
+    margin-bottom: 1rem;
+  }
+
+  .btn-logout {
+    order: 1;
+    align-self: stretch;
+  }
 }
 
 @media (max-width: 430px) {
@@ -401,6 +442,20 @@ footer {
   }
 
   .footer {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-text {
+    order: 2;
+    margin-bottom: 1rem;
+  }
+
+  .btn-logout {
+    order: 1;
+    align-self: stretch;
+    margin-bottom: 1rem;
   }
 }
