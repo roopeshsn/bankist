@@ -1203,3 +1203,33 @@ h4 {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 360px) {
+  .modal__header {
+    font-size: 2rem;
+    margin-bottom: 4.5rem;
+    line-height: 1.4;
+  }
+
+  .modal__form {
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .modal__form label {
+    font-size: 1.3rem;
+    padding: 0.25rem;
+  }
+
+  .modal__form input {
+    font-size: 1.3rem;
+    padding: 0.25;
+  }
+}
+
+@media (max-width: 320px) {
+  .modal__form {
+    margin: 0 auto;
+    gap: 0.5rem;
+  }
+}
