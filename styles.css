@@ -657,8 +657,7 @@ h4 {
 }
 
 .hidden {
-  visibility: hidden;
-  /* opacity: 0; */
+  display: none;
 }
 
 /* COOKIE MESSAGE */
